@@ -164,10 +164,10 @@ The other thing and this is an important feature is any address is defined to be
   - **$\alpha_{j}=1$ if $j\owns A$**
 
     - 01101001 {0,3,5,6}
-    - _7<span style="color:red">65</span>4<span style="color:red">3</span>21<span style="color:red">0</span>_
+    - _7<span style="color:DarkRed">65</span>4<span style="color:DarkRed">3</span>21<span style="color:DarkRed">0</span>_
 
     - 01010101 {0,2,4,6}
-    - _7<span style="color:red">6</span>5<span style="color:red">4</span>3<span style="color:red">2</span>1<span style="color:red">0</span>_
+    - _7<span style="color:DarkRed">6</span>5<span style="color:DarkRed">4</span>3<span style="color:DarkRed">2</span>1<span style="color:DarkRed">0</span>_
 
 This example is an imagine we want to represent sets. Where the elements of the set are numbers ranging between 0 and 7. So 1 byte is enought to capture eight cases.
 
@@ -1243,8 +1243,8 @@ You can see that the values are very dense around zero, so they've very spaced v
 
 #### 2.4.5 Floating Point Multiplication
 
-- <span style="color:red">**(-1)$^{s1}$ M1 2$^{E1}$ $\times$ (-1)$^{s2}$ M2 S$^{E2}$**</span>
-- **Exact Result: <span style="color:red">(-1)$^{s}$ M1 2$^{E}$</span>**
+- <span style="color:DarkRed">**(-1)$^{s1}$ M1 2$^{E1}$ $\times$ (-1)$^{s2}$ M2 S$^{E2}$**</span>
+- **Exact Result: <span style="color:DarkRed">(-1)$^{s}$ M1 2$^{E}$</span>**
 
   - Sign s: s1 ^ s2
   - Significant M: M1 $\times$ M2
@@ -1261,11 +1261,11 @@ You can see that the values are very dense around zero, so they've very spaced v
 
 #### 2.4.6 Floating Point Addition
 
-- <span style="color:red">**(-1)$^{s1}$ M1 2$^{E1}$ + (-1)$^{s2}$ M2 S$^{E2}$**</span>
+- <span style="color:DarkRed">**(-1)$^{s1}$ M1 2$^{E1}$ + (-1)$^{s2}$ M2 S$^{E2}$**</span>
 
   - Assume E1 > E2
 
-- **Exact Result: <span style="color:red">(-1)$^{s}$ M1 2$^{E}$</span>**
+- **Exact Result: <span style="color:DarkRed">(-1)$^{s}$ M1 2$^{E}$</span>**
 
   - Sign s, significant M:
     - Result of signed align & add
@@ -1289,40 +1289,40 @@ So the same thing holds for floating point numbers, they follow very predictable
 
   ![abelian_group](./images/abelian_group.webp)
 
-  - Closed under addition? **<span style="color:red">Yes<span>**
+  - Closed under addition? **<span style="color:DarkRed">Yes<span>**
     - But may generate infinity or NaN
-  - Commutative? **<span style="color:red">Yes<span>**
+  - Commutative? **<span style="color:DarkRed">Yes<span>**
 
     _The big thing with addition is that it doesn;t associate, it's communtative but it's not associative._
 
-  - Associative? **<span style="color:red">No<span>**
+  - Associative? **<span style="color:DarkRed">No<span>**
     - Overflow and inexactness of rounding
     - (3.14 + 1e$^{10}$) - 1e$^{10}$ = 0, 3.14 + (1e$^{10}$ - 1e$^{10}$) = 3.14
   - 0 is additive identity?
-  - Every element has additive inverse? **<span style="color:red">Yes<span>**
-    - Yes, except for infinities & NaNs **<span style="color:red">Almost<span>**
+  - Every element has additive inverse? **<span style="color:DarkRed">Yes<span>**
+    - Yes, except for infinities & NaNs **<span style="color:DarkRed">Almost<span>**
 
 - **Monotonicity**
-  - a >= b => a+c >= b+c? **<span style="color:red">Almost<span>**
+  - a >= b => a+c >= b+c? **<span style="color:DarkRed">Almost<span>**
     - Except for infinities & NaNs
 
 #### 2.4.8 Mathematical Properties of Floating Point Multiplication
 
 - **Compare to Commutative Ring**
 
-  - Closed under multiplication? **<span style="color:red">Yes<span>**
+  - Closed under multiplication? **<span style="color:DarkRed">Yes<span>**
     - But may generate infinity or NaN
-  - Multiplication Commutative? **<span style="color:red">Yes<span>**
-  - Multiplication is Associative? **<span style="color:red">No<span>**
+  - Multiplication Commutative? **<span style="color:DarkRed">Yes<span>**
+  - Multiplication is Associative? **<span style="color:DarkRed">No<span>**
     - Possibility of overflw, inexactness of rounding
     - (1e$^{20}$ _ 1e$^{20}$) _ 1e - 20 = inf, 1e$^{20}$ \* (1e$^{20}$ - 20) = 1e$^{20}$
-  - 1 is multiplication identity? **<span style="color:red">Yes<span>**
-  - Multiplication distributes over addition? **<span style="color:red">No<span>**
+  - 1 is multiplication identity? **<span style="color:DarkRed">Yes<span>**
+  - Multiplication distributes over addition? **<span style="color:DarkRed">No<span>**
     - Possibility of overflow, inexactness of rounding
     - 1e$^{20}$ _ (1e$^{20}$ - 1e$^{20}$) = 0.0, 1e$^{20}$ _ 1e$^{20}$ - 1e$^{20}$ \* 1e$^{20}$ = NaN
 
 - **Monotonicity**
-  - a >= b => a\*c >= b\*c? **<span style="color:red">Almost<span>**
+  - a >= b => a\*c >= b\*c? **<span style="color:DarkRed">Almost<span>**
     - Except for infinities & NaNs
 
 ### 2.5 Floating point in C
@@ -1491,17 +1491,17 @@ So they're really selling what intellectual property is as opposed to chips.
 
 #### 3.2.1 Definitions
 
-- **<span style="color:red">Architecture:</span> (also ISA: Instruction Set Architecture) The parts of a proccessor design that one needs to understand or write assembly/machine code.**
+- **<span style="color:DarkRed">Architecture:</span> (also ISA: Instruction Set Architecture) The parts of a proccessor design that one needs to understand or write assembly/machine code.**
 
   - Example: instruction set specification, registers.
 
-- **<span style="color:red">Microarchitecture:</span> Implementation of the architecture.**
+- **<span style="color:DarkRed">Microarchitecture:</span> Implementation of the architecture.**
 
   - Examples: cache sizes and core frequency.
 
 - **Code Forms:**
-  - <span style="color:red">Machine Code:</span> The byte-level programs that a processor executes
-  - <span style="color:red">Assembly Code:</span> A text representation of machine code
+  - <span style="color:DarkRed">Machine Code:</span> The byte-level programs that a processor executes
+  - <span style="color:DarkRed">Assembly Code:</span> A text representation of machine code
 - **Example ISAs:**
   - Intel: x86, IA32, Itanium, x86-64
   - ARM: Used in almost all mobile phones
@@ -1569,7 +1569,7 @@ gcc -Og -S sum.c
 
 **Produces file sum.s**
 
-_<span style="color:red"> Warning: Will get very differnt results on different machines.</span>_
+_<span style="color:DarkRed"> Warning: Will get very differnt results on different machines.</span>_
 
 **Generated x86-64 Assembly on shark machine**
 
@@ -1736,7 +1736,7 @@ The `movq` instruction in x86 is actually can do a lot of things, because it can
 
 - **Operand Types**
 
-  - _<span style="color:red">Immediate:</span>_ Constant integer data
+  - _<span style="color:DarkRed">Immediate:</span>_ Constant integer data
 
     - Example: `$0x400, $-533`
     - Like C constant, but prefiexed with `$`
@@ -1744,7 +1744,7 @@ The `movq` instruction in x86 is actually can do a lot of things, because it can
 
     It's actually a number that's baked into the program, that you want to copy into some other location.
 
-  - _<span style="color:red">Register:</span>_ One of 16 integer registers
+  - _<span style="color:DarkRed">Register:</span>_ One of 16 integer registers
 
     - Example: `%rax, %r13`
     - But `%rsp` reserved for special use
@@ -1752,7 +1752,7 @@ The `movq` instruction in x86 is actually can do a lot of things, because it can
 
     It's one a specially namaed memory of locaitons.
 
-  - _<span style="color:red">Memory:</span>_ 8 consecutive bytes of memory at address given by register
+  - _<span style="color:DarkRed">Memory:</span>_ 8 consecutive bytes of memory at address given by register
 
     - Simplest example: `(%rax)`
     - Various other "address modes"
@@ -2896,7 +2896,7 @@ The reason I'm showing this is, because I want to use the addresses that these i
 
 - **Use stack to support procedure call and return**
 
-- **<span style="color:red">Procedure call:</span> `call lable`**
+- **<span style="color:DarkRed">Procedure call:</span> `call lable`**
 
   - Push return address on stack
   - Jump to label
@@ -2906,7 +2906,7 @@ The reason I'm showing this is, because I want to use the addresses that these i
   - Address of the next instruction right after a call
   - Example from disassembly
 
-- **<span style="color:red">Procedure return:</span> `ret`**
+- **<span style="color:DarkRed">Procedure return:</span> `ret`**
   - Pop address from stack
   - Jump to address
 
@@ -2958,7 +2958,7 @@ Back in the bad old days of IA-32 by the way all arguments got passed on the sta
 
 #### 5.3.3 Managing local data
 
-To get that idea across we have to bring another concept which is called the **<span style="color:red">Stack Frame<span>**.
+To get that idea across we have to bring another concept which is called the **<span style="color:DarkRed">Stack Frame<span>**.
 
 This is a particular allocation pattern that's used in memory, one of the feature of calling and returning is you can imagine when you have a nested series of calls to a function.
 
@@ -2984,10 +2984,10 @@ That's why this idea of a stack. You allocate something if you make more calls y
   - State for given procedure needed for limited time
     - From when called to when return
   - Callee returns before caller does
-- **Stack allocated in <span style="color:red">Frames</span>**
+- **Stack allocated in <span style="color:DarkRed">Frames</span>**
   - State for insgle procedure instantiation
 
-So each block we use for a particular call then is called the **<span style="color:red">Stack Frame<span>**. It's a frame for a particular instance of a procedure a particular call to a procedure.
+So each block we use for a particular call then is called the **<span style="color:DarkRed">Stack Frame<span>**. It's a frame for a particular instance of a procedure a particular call to a procedure.
 
 ##### 5.3.3.2 Call Chain Example
 
@@ -3150,8 +3150,8 @@ The answer is not general. Because "who" might have overwritten `%rdx` and put s
 
 - **When procedure `yoo` calls `who`:**
 
-  - `yoo` is the <span style="color:red">caller</span>
-  - `who` is the <span style="color:red">callee</span>
+  - `yoo` is the <span style="color:DarkRed">caller</span>
+  - `who` is the <span style="color:DarkRed">callee</span>
 
 - **Can register be used for temporary storage?**
   ![register_saving_convention.png](./images/register_saving_convention.png)
@@ -3163,17 +3163,17 @@ The answer is not general. Because "who" might have overwritten `%rdx` and put s
 So the obvious answer is while you should not have used `%rdx` for that purpose. And that's why we will come up with a set of conventions.
 
 - **Conventions**
-  - <span style="color:red">"Caller Saved"</span>
+  - <span style="color:DarkRed">"Caller Saved"</span>
     - Caller saves temporary values in its frame before the call
-  - <span style="color:red">"Callee Saved"</span>
+  - <span style="color:DarkRed">"Callee Saved"</span>
     - Callee saves temporary values in its frame before using
     - Callee restores them before returning to caller
 
 So in some terminology, when we are talking about one function calling another, it's useful to have used the following words, we'll call the calling function the `caller`, and the function that gets called the `callee`.
 
-Now there's basically two ways we can manage register it can be what's called <span style="color:red">"caller saved"</span>, which means if the caller really cares, if you really want to value that will be there when it returns when control returns back to it. Then it should store it away first, it shouldn't assume that the register will be. It should assume that the register might get altered by it.
+Now there's basically two ways we can manage register it can be what's called <span style="color:DarkRed">"caller saved"</span>, which means if the caller really cares, if you really want to value that will be there when it returns when control returns back to it. Then it should store it away first, it shouldn't assume that the register will be. It should assume that the register might get altered by it.
 
-But there's another class we can deiine it called <span style="color:red">"callee save"</span>, which is sort of a contract between all the functions and it's built into the ABI. if a particular function wants to alter this register, what it needs to do is first store it away and it will do it by putting the value in the stack. Then before we return from the procedure, we should restore it back to whatever it was before.
+But there's another class we can deiine it called <span style="color:DarkRed">"callee save"</span>, which is sort of a contract between all the functions and it's built into the ABI. if a particular function wants to alter this register, what it needs to do is first store it away and it will do it by putting the value in the stack. Then before we return from the procedure, we should restore it back to whatever it was before.
 
 ##### 5.3.3.6 x86-64 Linux Register Usage #1 - caller
 
@@ -4089,7 +4089,7 @@ By that means then you can inject code into a machine potentially somewhere else
 
 #### 7.2.5 Exploits Based on Buffer Overflows
 
-- **<span style="color:red">Buffer overflow bugs can allow remote machines to execute arbitrary code on victime machines</span>**
+- **<span style="color:DarkRed">Buffer overflow bugs can allow remote machines to execute arbitrary code on victime machines</span>**
 - Distressingly common in real programs
   - Progreammers keep making the same mistakes
   - Recent measures make these attacks much more difficult
@@ -4359,7 +4359,7 @@ And then can again go from ones that will generally make programs run fast acros
 
   - Compiler has difficulty anticipating run-time inputs
 
-- **<span style="color:red">When in doubt, the compiler must be conservave</span>**
+- **<span style="color:DarkRed">When in doubt, the compiler must be conservave</span>**
 
 ### 8.2 Generally Useful Optimizations
 
@@ -4510,7 +4510,7 @@ size_t strlen(const char *s)
 }
 ```
 
-- **<span style="color:red">Warning</span>**
+- **<span style="color:DarkRed">Warning</span>**
 
   - Compiler treats procedure call as a black box
   - Weak optimization near them
@@ -4594,7 +4594,7 @@ Then you'll see this exact same loop all of a sudden gets a lot simpler. It's ju
     - Direct access to storage structures
   - Get in habit of introducing local variables
     - Accumulating with loops
-    - <span style="color:red">Your way of telling compiler not to check for aliasing</span>
+    - <span style="color:DarkRed">Your way of telling compiler not to check for aliasing</span>
 
 ### 8.4 Exploiting Instruction-Level Parallelism
 
@@ -4666,7 +4666,7 @@ So that's why it's called **Cycles Per Elements (CPE)**.
 
 - **Convenient way to express performance of program that operates on vectors or lists**
 - **Length = n**
-- **In our case: <span style="color:red">CPE = cycles per OP</span>**
+- **In our case: <span style="color:DarkRed">CPE = cycles per OP</span>**
 - **T = CPE\*n + Overhead**
   - CPE in slope of line
 
@@ -4751,9 +4751,9 @@ The main thing do think about is our machine has resources to do multiple operat
 
 #### 8.4.6 Superscalar Processor
 
-- **<span style="color:red">Definition:</span> A supoerscalar processor can issue and execute <span style="color:red">multiple instructions in one cycle</span>. The instructions are retrieved from a sequential instruction stream and are usually scheduled dynamically.**
+- **<span style="color:DarkRed">Definition:</span> A supoerscalar processor can issue and execute <span style="color:DarkRed">multiple instructions in one cycle</span>. The instructions are retrieved from a sequential instruction stream and are usually scheduled dynamically.**
 
-- **Benefit: without programming effort, superscalar processor can take advantage of the <span style="color:red">instruction level parallelism</span> that most programs have.**
+- **Benefit: without programming effort, superscalar processor can take advantage of the <span style="color:DarkRed">instruction level parallelism</span> that most programs have.**
 
 - **Most modern CPUs are superscalar.**
 - **Intel: since Pentium (1993)**
@@ -4948,7 +4948,7 @@ So typically the program you know feteching ahead grabbing instructions and it w
 
 - **Challenge**
 
-  - <span style="color:red">Instruction Control Unit</span> must work well ahead of <span style="color:red">Execution Unit</span> to generate enough operations to keep EU busy
+  - <span style="color:DarkRed">Instruction Control Unit</span> must work well ahead of <span style="color:DarkRed">Execution Unit</span> to generate enough operations to keep EU busy
     ![program_optimization_30.png](./images/program_optimization_30.png)
   - When encounters conditional branch, cannot reliably determine where to continue fetching
 
@@ -5033,8 +5033,8 @@ Remember the difference between conditional moves and conditinal jumps to implem
 
 - **Key features**
 
-  - <span style="color:red">RAM</span> is traditionally package as a chip.
-  - Basic storage unit is normally a <span style="color:red">cell</span> (one bit per cell).
+  - <span style="color:DarkRed">RAM</span> is traditionally package as a chip.
+  - Basic storage unit is normally a <span style="color:DarkRed">cell</span> (one bit per cell).
   - Multiple RAM chips form a memory.
 
 - **RAM comes in two varieties:**
@@ -5074,7 +5074,7 @@ Remember the difference between conditional moves and conditinal jumps to implem
 
 #### 9.1.3 Traditional Bus Structure Connecting CPU and Memory
 
-- **A <span style="color:red">bus</span> is collectio of parallel wires that carry address, data, and controls signals.**
+- **A <span style="color:DarkRed">bus</span> is collectio of parallel wires that carry address, data, and controls signals.**
 
 - **Buses are typically shared by multiple devices.**
 
@@ -5137,14 +5137,14 @@ So memory operations reads and writes are typically maybe 50ns ~ 100ns whereas o
 
 #### 9.1.7 Disk Capcacity
 
-- **<span style="color:red">Capacity</span>**: maximum number of bits that can be stored.
+- **<span style="color:DarkRed">Capacity</span>**: maximum number of bits that can be stored.
 
   - Vendors express in units of giga bytes (GB), where 1GB = 10$^{9}$ Bytes.
 
 - **Capacity is determined by these technology factors:**
-  - <span style="color:red">Recording density</span> (bits/in): number of bits that can be squeesed into 1 inch segment of a track.
-  - <span style="color:red">Track density</span> (tracks/in): number of tracks that can be sequeeze
-  - <span style="color:red">Areal density</span>(bits/in2): product of recording and trank density.
+  - <span style="color:DarkRed">Recording density</span> (bits/in): number of bits that can be squeesed into 1 inch segment of a track.
+  - <span style="color:DarkRed">Track density</span> (tracks/in): number of tracks that can be sequeeze
+  - <span style="color:DarkRed">Areal density</span>(bits/in2): product of recording and trank density.
 
 #### 9.1.8 Recording zones
 
@@ -5208,14 +5208,14 @@ There are 3 components going on here that determine how long it takes to read on
 
 - Average time to access some target sector approximated by:
   - Taccess = Tavg seek + Tavg rotation + Tavg transfer
-- <span style="color:red">Seek time</span> (Tavg seek)
+- <span style="color:DarkRed">Seek time</span> (Tavg seek)
   - Time to position heads over cylinder containing target sector.
   - Typical Tavg seek is 3 - 9 ms
-- <span style="color:red">Rotation latency</span> (Tavg rotation)
+- <span style="color:DarkRed">Rotation latency</span> (Tavg rotation)
   - Time waiting for first bit of target sector to pass under r/w head.
   - Tavg rotation = 1/2 x 1/RPMs x 60 sec/1 min
   - Typical Tavg rotation - 7200 RPMs
-- <span style="color:red">Transfer time</span> (Tavg transfer)
+- <span style="color:DarkRed">Transfer time</span> (Tavg transfer)
   - Time to read the bits in the target sector.
   - Tavg transfer = 1/RPM x 1/(avg # sectors/track) x 60 secs/1 min.
 
@@ -5243,7 +5243,7 @@ There are 3 components going on here that determine how long it takes to read on
 #### 9.1.13 Logical Disk Blocks
 
 - **Modern disks present a simpler abstract view of the complex sector geometry:**
-  - The set of available sectors is modeled as a sequence of b-sized <span style="color:red">logical blocks</span> (0, 1, 2, ...)
+  - The set of available sectors is modeled as a sequence of b-sized <span style="color:DarkRed">logical blocks</span> (0, 1, 2, ...)
 - **Mapping between logical blocks and actual (physical) sectors**
 
   - Maintained by hardware/firmware device called disk controller.
@@ -5323,7 +5323,7 @@ If you want to write to a page, you have to find a block somewhere that's been e
 
 #### 9.1.18 The CPU-Memory Gap
 
-**<span style="color:red">The gap widens between DRAM, disk, and CPU speeds.</span>**
+**<span style="color:DarkRed">The gap widens between DRAM, disk, and CPU speeds.</span>**
 
 ![memory_hierarchy_23.png](./images/memory_hierarchy_23.png)
 
@@ -5339,17 +5339,17 @@ It turns out that the key to bridging this CPU-Memory, this is very baisc fundam
 
 #### 9.2.1 Locality
 
-- **<span style="color:red">Principle of Locality:</span>: Programs tend to use data and instructions with address near or equal to those they have used recently**
+- **<span style="color:DarkRed">Principle of Locality:</span>: Programs tend to use data and instructions with address near or equal to those they have used recently**
 
 If a program access is a data item, the chances are very high, that it's going to access that data item or a nearby data item sometime in the near future. That likelyhood that the program is going to access that data item or nearby a data item in the near future. That is this property called **locality**.
 
-- **<span style="color:red">Temporal locality:</span>**
+- **<span style="color:DarkRed">Temporal locality:</span>**
 
   - Recently referenced items are likely to be referenced again in the near future
   - If you read a variable, chances are you're going to read that variable again. For example supposed you're running into a variable inside of a loop.
   - ![memory_hierarchy_24.png](./images/memory_hierarchy_24.png)
 
-- **<span style="color:red">Spatial locality:</span>**
+- **<span style="color:DarkRed">Spatial locality:</span>**
   - Items with nearby address tend to be referenced close together in time
   - If we access one item, chances are high we're going to access nearby item
   - ![memory_hierarchy_25.png](./images/memory_hierarchy_25.png)
@@ -5365,17 +5365,17 @@ return sum;
 
 - **Data references**
 
-  - Reference array elements in succession (stride-1 reference pattern) -> **<span style="color:red">Temporal locality</span>**
-  - Reference variable `sum` each iteration -> **<span style="color:red">Spatial locality</span>**
+  - Reference array elements in succession (stride-1 reference pattern) -> **<span style="color:DarkRed">Temporal locality</span>**
+  - Reference variable `sum` each iteration -> **<span style="color:DarkRed">Spatial locality</span>**
 
 - **Instruction references**
 
-  - Reference instructions in sequence -> **<span style="color:red">Spatial locality</span>**
-  - Cycle through loop repeartedly -> **<span style="color:red">Temporal locality</span>**
+  - Reference instructions in sequence -> **<span style="color:DarkRed">Spatial locality</span>**
+  - Cycle through loop repeartedly -> **<span style="color:DarkRed">Temporal locality</span>**
 
-- **<span style="color:red">Claim<:</span> Being able to look at code and get a qualitative sense of it locality is a key skill for a professional programer.**
+- **<span style="color:DarkRed">Claim<:</span> Being able to look at code and get a qualitative sense of it locality is a key skill for a professional programer.**
 
-- **<span style="color:red">Question:</span> Does this function have good locality with repect to array `a`?**
+- **<span style="color:DarkRed">Question:</span> Does this function have good locality with repect to array `a`?**
 
 #### 9.2.2 Qualitative Estimates of Locality
 
@@ -5394,7 +5394,7 @@ int sum_array_rows(int a[M][N])
 
 **An awful example: the worse locality**
 
-<span style="color:red">Question:</span> Does this function have good localty with respect to array `a`?
+<span style="color:DarkRed">Question:</span> Does this function have good localty with respect to array `a`?
 
 ```c
 int sum_array_cols(int a[M][N])
@@ -5411,7 +5411,7 @@ int sum_array_cols(int a[M][N])
 
 **A 3 dimension example**
 
-<span style="color:red">Question:</span> Can you permute the loops so that the function scans the 3-d array `a` with a stride-1 reference pattern (and thus good spatial locality)?
+<span style="color:DarkRed">Question:</span> Can you permute the loops so that the function scans the 3-d array `a` with a stride-1 reference pattern (and thus good spatial locality)?
 
 ```c
 int sum_array_3d(int a[M][N][N])
@@ -5437,7 +5437,7 @@ int sum_array_3d(int a[M][N][N])
 
 - **These fundamental properties complement each other beautifully.**
 
-- **They suggest an approach for organizing memory and storage systems known as a <span style="color:red">memory hierarchy</span>**
+- **They suggest an approach for organizing memory and storage systems known as a <span style="color:DarkRed">memory hierarchy</span>**
 
 ### 9.3 Caching in the memory hierarchy
 
@@ -5445,7 +5445,7 @@ int sum_array_3d(int a[M][N][N])
 
 #### 9.3.1 Caches
 
-- **_<span style="color:red">Cache:</span>_ A smaller, faster storage device that acts as a staging area for a subset of the data in a larger, slower device.**
+- **_<span style="color:DarkRed">Cache:</span>_ A smaller, faster storage device that acts as a staging area for a subset of the data in a larger, slower device.**
 
 - **Fundamental idea of a memory hierarachy:**
 
@@ -5456,7 +5456,7 @@ int sum_array_3d(int a[M][N][N])
   - Because of locality, programs tend to access the data at level k more often than they access the data at level k+1.
   - Thus, the storage at level k+1 can be slower, and thus larger and cheaper per bit.
 
-- **_<span style="color:red">Big Data:</span>_ The memory hierarchy creates a large pool of storage that costs as much as the cheap storage near the bottom, but that serves data to programs at the rate of the fast storage near the top.**
+- **_<span style="color:DarkRed">Big Data:</span>_ The memory hierarchy creates a large pool of storage that costs as much as the cheap storage near the bottom, but that serves data to programs at the rate of the fast storage near the top.**
 
 #### 9.3.2 General Cache Concepts
 
@@ -5506,16 +5506,16 @@ That takes longer so the CPU has to wait for that block to be extracted to be fe
 
 #### 9.3.5 General Caching Concepts: Types of Cache Misses
 
-- **<span style="color:red">Cold (compulsory) miss</span>**
+- **<span style="color:DarkRed">Cold (compulsory) miss</span>**
   - Cold misses occur because the cache is empty.
-- **<span style="color:red">Conflict miss</span>**
+- **<span style="color:DarkRed">Conflict miss</span>**
 
   - Most caches limit blocks at level k+1 to a small subset (sometimes a singleton) of the block positions at level k.
     - E.g. Block is at level k+1 must be placed in block(i mod 4) at level k.
   - Conflit misses occur when the level k cache is large enough, but multiple data objects all map to the same level k block,
     - E.g. Referencing blocks 0, 8, 0, 8, 0, 8, ... would miss every time.
 
-- **<span style="color:red">Capacity miss</span>**
+- **<span style="color:DarkRed">Capacity miss</span>**
   - Occurs when the set of active cache blocks (working set) is larger than the cache.
 
 #### 9.3.6 Examples of Caching in the Mem. Hierarchy
@@ -5598,7 +5598,7 @@ Then it looks at the block offset which is four, and which tells it that the fou
 
 Now the cache takes this `int` and it sends it back to the CPU which puts it in the register.
 
-**<span style="color:red">If tag doesn't match:</span> old line is evicted and replaced**
+**<span style="color:DarkRed">If tag doesn't match:</span> old line is evicted and replaced**
 
 If the tag doesn't match then the old-line, if the that doesn't match then there's a miss. In that cache the cache hass to fetch the block the corresponding block from memory. And then overwhite this block in the line.
 
@@ -5664,17 +5664,17 @@ Now instead of 2 sets, we have 4 sets. So the cache, this is the same sized cach
 
 - **What to do on a write-hit?**
 
-  - <span style="color:red">Write-through</span> (write immediately to memory)
-  - <span style="color:red">Write-back</span> (defer write to memory until replacement of line)
+  - <span style="color:DarkRed">Write-through</span> (write immediately to memory)
+  - <span style="color:DarkRed">Write-back</span> (defer write to memory until replacement of line)
     - Need a dirty bit (line different from memory or not)
     - Algorithm: WHen the cache identifies a particular line to overwrite, it checks the dirty bit on that line if it's set, then it writes the data to back to disk.
     - If the data hasn't written, there's no point need to write it back, because it has the same value as the copy of the block on disk
 
 - **What to do on a write-miss?**
 
-  - <span style="color:red">Write-allocate</span> (load into cache, update line in cache)
+  - <span style="color:DarkRed">Write-allocate</span> (load into cache, update line in cache)
     - Good if more writes to the location follow
-  - <span style="color:red">New-Write-allocate</span> (writes straight to memory, does not load into cache)
+  - <span style="color:DarkRed">New-Write-allocate</span> (writes straight to memory, does not load into cache)
 
 - **Typical**
   - Write-through + No-write-allocate
